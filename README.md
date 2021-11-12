@@ -2,7 +2,7 @@
 A JavaScript program that takes an input string, reverses it, and then displays it in the page/DOM
 
 # Live Demo
-https://github.com/JorySmith/Reverse
+https://jorysmith.github.io/Reverse/
 
 # Description
 The code is structured in three functions: getInputString(), reverseString(), and displayString().
