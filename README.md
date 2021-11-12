@@ -1,5 +1,4 @@
 # Reverse - A Coding Project
-
 Executive summary. 
 
 # Live Demo
