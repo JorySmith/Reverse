@@ -1,5 +1,9 @@
-# CodeProjectTemplate
+# Reverse - A Coding Project
 
-A website template for JS coding projects
+Executive summary. 
 
-Live demo: https://jorysmith.github.io/CodeProjectTemplate/
+# Live Demo
+https://jorysmith.github.io/CodeProjectTemplate/
+
+# Description
+Description here.
