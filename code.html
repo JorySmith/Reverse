@@ -48,7 +48,8 @@
                         <a class="nav-link mx-1 active" aria-current="page" href="code.html">App Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" target="_blank" href="https://github.com/JorySmith/Reverse">GitHub Repo</a>
+                        <a class="nav-link mx-1" target="_blank" href="https://github.com/JorySmith/Reverse">GitHub
+                            Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-1" target="_blank" href="https://www.joryiansmith.dev/">My Portfolio</a>
@@ -66,17 +67,44 @@
                     <pre class="line-numbers">
                         <!-- NOTE: Prism doesn't handle template literals well -->
                         <code class="language-javascript">
-                            // Call Hello World
-                            function helloWorld() {
-                                alert("Hello World");
+                            // Get user inputted string aka Controller function
+                            function getInputString() {
+                                document.getElementById("alertBox").classList.add("invisible");
+                                let inputString = document.getElementById("inputString").value;
+                                let revString = reverseString(inputString);
+                                displayString(revString);
+                            }
+
+                            // Reverse input string aka Logic function
+                            function reverseString(inputString) {    
+                                // Since a string can be treated as an array,
+                                // use a for loop starting from the input string's end
+                                // and push each letter to a new reveredString array
+                                let reversedString = [];
+                                for (let i = inputString.length-1; i >= 0; i--) {
+                                    reversedString += inputString[i];        
+                                }
+                                return reversedString
+                            }
+
+                            // Display reversed string in the DOM/alert message section
+                            // aka View function
+                            function displayString(revString) {
+                                // Display reversed string in the DOM
+                                document.getElementById("alertMsg").innerHTML = `Your string has been reversed to: &ltbr> 
+                                &ltspan class="fw-bold">${revString}&lt/span>`
+                                // Show the alert box message
+                                document.getElementById("alertBox").classList.remove("invisible");
                             }
                         </code>
                     </pre>
                 </div>
                 <div class="col-md-4">
                     <h5 class="mt-2">Reverse</h5>
-                    <p class="mt-4">The code is structured in UPDATE THIS one function. <br><br>
-                        Hello World is a function that displays an alert message, "Hello World"
+                    <p class="mt-4">The code is structured in three functions: getInputString(), reverseString(), and displayString().<br><br>
+                        First, an event listener is placed on the button to submit a user's string. Then the program gets the user inputted string and passes it as a parameter to the reverseString function.<br><br>
+                        Since a string can be treated as an array, the program applies a for loop starting from the input string's end and pushes each letter to a new reveredString array during each iteration of the loop. <br><br>
+                        The resulting reversed string is then passed to the displayString function where it displays the reversed string in the DOM/alert message section of the App Code page.
                     </p>
                 </div>
             </div>
