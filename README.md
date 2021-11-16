@@ -1,5 +1,5 @@
 # Reverse - A Coding Project
-A JavaScript program that takes an input string, reverses it, and then displays it in the page/DOM
+A JavaScript program that takes an input string, reverses it, and then displays it in the page/DOM.
 
 # Live Demo
 https://jorysmith.github.io/Reverse/
